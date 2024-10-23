@@ -1,5 +1,7 @@
-import { Outlet, Link, useLoaderData, } from "react-router-dom";
+import { Outlet, Link, useLoaderData } from "react-router-dom";
 import { getContacts } from "../contacts";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 
 export async function loader() {
   const contacts = await getContacts();
@@ -8,31 +10,17 @@ export async function loader() {
 
 export default function Root() {
   const { contacts } = useLoaderData();
+
+  const handleLogout = () => {
+    signOut(auth);
+  };
+
   return (
     <>
       <div id="sidebar">
-        <div>
-          <form id="search-form" role="search">
-            <input
-              id="q"
-              aria-label="Search contacts"
-              placeholder="Search"
-              type="search"
-              name="q"
-            />
-            <div
-              id="search-spinner"
-              aria-hidden
-              hidden={true}
-            />
-            <div
-              className="sr-only"
-              aria-live="polite"
-            ></div>
-          </form>
-        </div>
         <nav>
-        {contacts.length ? (
+          <button onClick={handleLogout}>Logout</button>
+          {contacts.length ? (
             <ul>
               {contacts.map((contact) => (
                 <li key={contact.id}>
@@ -43,7 +31,7 @@ export default function Root() {
                       </>
                     ) : (
                       <i>No Name</i>
-                    )}{" "}
+                    )}
                     {contact.favorite && <span>★</span>}
                   </Link>
                 </li>

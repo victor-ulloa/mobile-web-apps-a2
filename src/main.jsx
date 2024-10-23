@@ -8,11 +8,26 @@ import "./index.css";
 import Root, { loader as rootLoader } from "./routes/root";
 import ErrorPage from "./error-page";
 import Contact from "./routes/contact";
+import Login from "./routes/login";
+import Signup from "./routes/signup";
+import Protected from "./routes/protected";
 
 const router = createBrowserRouter([
   {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
     path: "/",
-    element: <Root />,
+    element: (
+      <Protected>
+        <Root />
+      </Protected>
+    ),
     errorElement: <ErrorPage />,
     loader: rootLoader,
     children: [
@@ -23,7 +38,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
