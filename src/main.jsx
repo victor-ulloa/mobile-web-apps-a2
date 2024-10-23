@@ -7,7 +7,7 @@ import {
 import "./index.css";
 import Root, { loader as rootLoader } from "./routes/root";
 import ErrorPage from "./error-page";
-import Contact from "./routes/contact";
+import Contacts from "./routes/contacts";
 import Login from "./routes/login";
 import Signup from "./routes/signup";
 import Protected from "./routes/protected";
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
     loader: rootLoader,
     children: [
       {
-        path: "contacts/:contactId",
-        element: <Contact />,
+        path: "contacts",
+        element: <Contacts />,
       },
     ],
   },

@@ -1,0 +1,49 @@
+#sidebar {
+  width: 200px; /* Set your desired width */
+  background-color: #f8f9fa; /* Light background color */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space items out */
+  height: 100vh; /* Full height sidebar */
+  border-right: 1px solid #dee2e6; /* Add a right border */
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text */
+  border: none;
+  padding: 10px;
+  margin: 5px 0; /* Space between buttons */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.nav-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.contacts-list {
+  margin-top: 10px; /* Space between buttons and contacts list */
+}
+
+.logout-button {
+  background-color: #dc3545; /* Bootstrap danger color for logout */
+  color: white; /* White text */
+  border: none;
+  padding: 10px;
+  margin-top: auto; /* Push to the bottom */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.logout-button:hover {
+  background-color: #c82333; /* Darker shade on hover */
+}
