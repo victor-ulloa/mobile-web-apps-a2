@@ -13,6 +13,7 @@ import Signup from "./routes/signup";
 import Protected from "./routes/protected";
 import PokemonList from "./routes/pokemons";
 import NewsList from "./routes/News";
+import Weather from "./routes/weather";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "news",
         element: <NewsList />,
+      },
+      {
+        path: "weather",
+        element: <Weather />,
       }
     ],
   },

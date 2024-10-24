@@ -15,7 +15,7 @@ export default function Root() {
         <nav>
           <Link to="contacts"> Users </Link>
           <Link to="news"> News feed </Link>
-          <Link to="contacts"> Weather </Link>
+          <Link to="weather"> Weather </Link>
           <Link to="pokemons"> Pokemon </Link>
         </nav>
         
