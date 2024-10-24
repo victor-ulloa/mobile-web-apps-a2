@@ -1,5 +1,3 @@
-Here’s a more detailed README.md tailored for your GitHub project description, including project description and execution instructions:
-
 # Contact Management App
 
 ## Project Description
@@ -79,5 +77,3 @@ Acknowledgments
 
 	•	Thanks to the Firebase team for providing excellent tools for web application development.
 	•	Special thanks to the React community for creating a powerful framework that simplifies UI development.
-
-Feel free to modify any sections as per your requirements!
