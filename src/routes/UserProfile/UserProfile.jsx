@@ -3,20 +3,25 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../firebase";
 
 export default function UserProfile() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null); // State to hold the current user
 
   useEffect(() => {
+    // Subscribe to authentication state changes
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
+        // Set the user state if there is a current user
         setUser(currentUser);
       } else {
+        // Clear the user state if there is no current user
         setUser(null);
       }
     });
 
+    // Cleanup subscription on component unmount
     return () => unsubscribe();
   }, []);
 
+  // Render a message if no user is logged in
   if (!user) {
     return (
       <div className="user-profile">
@@ -25,6 +30,7 @@ export default function UserProfile() {
     );
   }
 
+  // Render the user's information if logged in
   return (
     <div className="user-profile">
       <h2>User Information</h2>
