@@ -4,21 +4,29 @@
   padding: 20px;
   max-width: 400px; /* Set a maximum width for better readability */
   margin: auto; /* Center the list on the page */
+  background-color: #121212; /* Dark background for the weather list */
 }
 
 .weather-card {
   padding: 15px;
   margin: 10px 0;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: #1e1e1e; /* Dark background for individual cards */
+  border: 1px solid #444; /* Darker border for contrast */
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+  color: #e0e0e0; /* Light text color for better readability */
 }
 
 .weather-card h2 {
   margin: 0 0 10px;
+  color: #bb86fc; /* Light purple for headings */
 }
 
 .weather-card p {
   margin: 5px 0;
+  color: #b0b0b0; /* Slightly lighter grey for paragraph text */
+}
+
+.weather-card p:hover {
+  color: #ffffff; /* Light up the text on hover for better interactivity */
 }

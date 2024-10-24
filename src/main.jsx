@@ -11,9 +11,9 @@ import Contacts from "./routes/Users/Users";
 import Login from "./routes/Authentication/login";
 import Signup from "./routes/Authentication/signup";
 import Protected from "./routes/protected";
-import PokemonList from "./routes/pokemons";
-import NewsList from "./routes/News";
-import Weather from "./routes/weather";
+import PokemonList from "./routes/Pokemons/pokemons";
+import NewsList from "./routes/News/News";
+import Weather from "./routes/Weather/Weather";
 import UserProfile from "./routes/UserProfile/UserProfile";
 
 const router = createBrowserRouter([

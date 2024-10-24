@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.contacts-list {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.contacts-list h2 {
+  text-align: center;
+  color: #03DAC6;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.contacts-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contacts-list li {
+  background-color: #2C2C2C;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.contacts-list li:hover {
+  background-color: #03DAC6;
+  color: #121212;
+}
+
+.contacts-list li.email {
+  background-color: #333333;
+}
+
+.contacts-list li:nth-child(odd) {
+  background-color: #333333;
+}
+
+.contacts-list li:nth-child(even) {
+  background-color: #2C2C2C;
+}
+
+.contacts-list li::before {
+  content: '👤 ';
+  font-size: 18px;
+}
+
+.contacts-list li:last-child {
+  margin-bottom: 0;
+}

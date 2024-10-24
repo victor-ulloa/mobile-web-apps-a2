@@ -1,21 +1,19 @@
 import { useState, useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../../firebase"; // Import the Firebase config
+import { auth } from "../../firebase";
 
 export default function UserProfile() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Listen for changes to the authenticated user
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        setUser(currentUser); // Set the user object if logged in
+        setUser(currentUser);
       } else {
-        setUser(null); // Clear the user if logged out
+        setUser(null);
       }
     });
 
-    // Cleanup subscription on component unmount
     return () => unsubscribe();
   }, []);
 
