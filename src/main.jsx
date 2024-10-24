@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import Root, { loader as rootLoader } from "./routes/root";
+import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import Contacts from "./routes/contacts";
 import Login from "./routes/login";
@@ -29,7 +29,6 @@ const router = createBrowserRouter([
       </Protected>
     ),
     errorElement: <ErrorPage />,
-    loader: rootLoader,
     children: [
       {
         path: "contacts",

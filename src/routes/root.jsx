@@ -1,16 +1,9 @@
-import { Outlet, Link, useLoaderData } from "react-router-dom";
-import { getContacts } from "../contacts";
+import { Outlet, Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import './root.css'; // Import the CSS file for styling
 
-export async function loader() {
-  const contacts = await getContacts();
-  return { contacts };
-}
-
 export default function Root() {
-  const { contacts } = useLoaderData();
 
   const handleLogout = () => {
     signOut(auth);
@@ -20,14 +13,10 @@ export default function Root() {
     <>
       <div id="sidebar">
         <nav>
-          <Link to="contacts">
-          Contacts
-          </Link>
-
-          {/* Additional buttons can be added here */}
-          <button className="nav-button">Button 2</button>
-          <button className="nav-button">Button 3</button>
-          <button className="nav-button">Button 4</button>
+          <Link to="contacts"> Users </Link>
+          <Link to="contacts"> News feed </Link>
+          <Link to="contacts"> Weather </Link>
+          <Link to="contacts"> Pokemon </Link>
         </nav>
         
         <button className="logout-button" onClick={handleLogout}>Logout</button>
