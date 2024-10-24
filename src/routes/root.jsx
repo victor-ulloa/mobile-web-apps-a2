@@ -16,7 +16,7 @@ export default function Root() {
           <Link to="contacts"> Users </Link>
           <Link to="contacts"> News feed </Link>
           <Link to="contacts"> Weather </Link>
-          <Link to="contacts"> Pokemon </Link>
+          <Link to="pokemons"> Pokemon </Link>
         </nav>
         
         <button className="logout-button" onClick={handleLogout}>Logout</button>

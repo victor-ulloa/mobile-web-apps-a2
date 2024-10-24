@@ -11,6 +11,7 @@ import Contacts from "./routes/contacts";
 import Login from "./routes/login";
 import Signup from "./routes/signup";
 import Protected from "./routes/protected";
+import PokemonList from "./routes/pokemons";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: "contacts",
         element: <Contacts />,
       },
+      {
+        path: "pokemons",
+        element: <PokemonList />,
+      }
     ],
   },
 ]);
