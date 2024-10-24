@@ -17,6 +17,7 @@ export default function Root() {
           <Link to="news"> News feed </Link>
           <Link to="weather"> Weather </Link>
           <Link to="pokemons"> Pokemon </Link>
+          <Link to="profile"> Profile </Link>
         </nav>
         
         <button className="logout-button" onClick={handleLogout}>Logout</button>

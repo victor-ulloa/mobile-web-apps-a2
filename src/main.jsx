@@ -14,6 +14,7 @@ import Protected from "./routes/protected";
 import PokemonList from "./routes/pokemons";
 import NewsList from "./routes/News";
 import Weather from "./routes/weather";
+import UserProfile from "./routes/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "weather",
         element: <Weather />,
+      },
+      {
+        path: "profile",
+        element: <UserProfile />,
       }
     ],
   },
