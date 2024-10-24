@@ -7,14 +7,14 @@ import {
 import "./index.css";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
-import Contacts from "./routes/contacts";
-import Login from "./routes/login";
-import Signup from "./routes/signup";
+import Contacts from "./routes/Users/Users";
+import Login from "./routes/Authentication/login";
+import Signup from "./routes/Authentication/signup";
 import Protected from "./routes/protected";
 import PokemonList from "./routes/pokemons";
 import NewsList from "./routes/News";
 import Weather from "./routes/weather";
-import UserProfile from "./routes/UserProfile";
+import UserProfile from "./routes/UserProfile/UserProfile";
 
 const router = createBrowserRouter([
   {

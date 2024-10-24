@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase"; // Import the Firebase config
+import { auth } from "../../firebase"; // Import the Firebase config
 
 export default function UserProfile() {
   const [user, setUser] = useState(null);
