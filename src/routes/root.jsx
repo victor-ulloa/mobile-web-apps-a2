@@ -14,7 +14,7 @@ export default function Root() {
       <div id="sidebar">
         <nav>
           <Link to="contacts"> Users </Link>
-          <Link to="contacts"> News feed </Link>
+          <Link to="news"> News feed </Link>
           <Link to="contacts"> Weather </Link>
           <Link to="pokemons"> Pokemon </Link>
         </nav>
